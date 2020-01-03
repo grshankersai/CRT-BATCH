@@ -1,0 +1,357 @@
+//4.Program for Palindrome number.
+
+#include <stdio.h>
+
+int main()
+{
+    int n, r, s=0;
+    scanf("%d", &n);
+    int rev=n;
+    while(n!=0) {
+        r=n%10;
+        s=s*10+r;
+        n=n/10;
+    }
+    if(rev==s)
+        printf("palindrome");
+    else printf("not palindrome");
+    return 0;
+}
+
+
+
+//5. Program for armstrong number(Sum of cubes of each digit= actual number)
+
+#include <stdio.h>
+
+int main()
+{
+    int n, r, s=0;
+    scanf("%d", &n);
+    int rev=n;
+    while(n!=0) {
+        r=n%10;
+        s=s + r*r*r;
+        n=n/10;
+    }
+    if(rev==s)
+        printf("Armstrong");
+    else printf("not armstrong");
+    return 0;
+}
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, r, p, s=0;
+    scanf("%d", &n);
+    int t=n;
+    while(t!=0) {
+        p++;
+        t=t/10;
+    }
+    t=n;
+    while(t!=0) {
+        r=t%10;
+        s=s + pow(r, p);
+        t=t/10;
+    }
+    if(t==s)
+        printf("Armstrong");
+    else printf("not armstrong");
+    return 0;
+}
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, r, p, t, range, s=0;
+    scanf("%d", &range);
+    for(n=1; n<=range; n++)
+    {
+        t=n;
+        s=0;
+        p=0;
+    }
+    
+    while(t!=0) {
+        p++;
+        t=t/10;
+    }
+    t=n;
+    
+    while(t!=0) {
+        r=t%10;
+        s=s + ceil(pow(r, p));
+        t=t/10;
+    
+        
+    }
+    
+    return 0;
+}
+
+
+
+
+// Program for printing palindrome numbers until range
+
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, r, t, range, s, k, c;
+    scanf("%d", &range);
+    
+    for(n=0; n<=range; n++)
+    {
+        t=n;
+        s=0;
+    
+    while(t!=0) {
+        r=t%10;
+        s=s*10 + r;
+        t=t/10;
+    
+    }
+    
+    if(n==s)
+        printf("%d  ", n);
+    }
+    
+    
+    return 0;
+}
+
+
+
+
+
+// Program to print k'th program
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, r, t, range, s, k, c;
+    scanf("%d", &k);
+    
+    for(n=0; c<k; n++)
+    {
+        t=n;
+        s=0;
+    
+    while(t!=0) {
+        r=t%10;
+        s=s*10 + r;
+        t=t/10;
+    
+    }
+    
+    if(n==s)
+    {
+        c++;
+        
+    }
+        
+    }
+    printf("%d = %d  ", c, n-1);
+    
+    
+    return 0;
+}
+
+
+
+
+// Program for printing prime numbers within given range and their SUM
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, c, s =0, range;
+    scanf("%d", &range);
+    for(n=2; n<=range; n++) {
+        c=0;
+        
+        for(int i=2; i<n/2; i++) {
+            if(n%i==0)
+                c++;
+        }
+        
+        if(c==0) {
+            s= s + n;
+            printf("%d  ", n);
+        }
+        
+    }
+    printf("\n");
+    printf("%d", s);    
+    return 0;
+}
+
+
+
+// Program to find nth prime number
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, c, s=0, count=0, k;
+    scanf("%d", &k);
+    for(n=2; count<k; n++) 
+    {
+        c=0;
+        
+        for(int i=2; i<=n/2; i++) 
+        {
+            if(n%i==0)
+                c++;
+        }
+        
+        if(c==0) {
+            count++;
+            s= s + n;
+            
+        }
+        //printf("%d  ", n);
+    }
+    //printf("\n");
+    printf("%d prime number is: %d", k, n-1);    
+    return 0;
+}
+
+
+
+
+// Program to Print nth number which has all EVEN digits
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int i, n, t, c=0,  r;
+    scanf("%d", &n);
+    for(i=0; c<n; i++)
+    {
+        t=i;
+        while(t!=0)
+        {
+            r=t%10;
+            if(r%2!=0)
+                break;
+            else
+                t=t/10;
+        }
+        if(t==0)
+        {   
+            c++;
+            
+        }
+    }
+    printf("%d even digits number is: %d  ",n, i-1);
+    return 0;
+}
+
+
+
+// Program to print only the numbers with digits which are prime numbers until a limit
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int i, n, t, c=0,  r;
+    scanf("%d", &n);
+    for(i=0; c<n; i++)
+    {
+        t=i;
+        while(t!=0)
+        {
+            r=t%10;
+            if(r!=2 && r!=3 && r!=5 && r!=7)
+                break;
+            else
+                t=t/10;
+        }
+        if(t==0)
+        {   
+            c++;
+            printf("%d  ", i);
+            
+        }
+    }
+    
+    return 0;
+}
+
+
+
+// Program to print sum of first and last digit
+
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int n, x, sum=0;
+    scanf("%d", &n);
+    sum+= n%10;
+    while(n!=0) 
+    {
+        x= n;
+        n/= 10;
+    }
+    sum+= x;
+    printf("%d", sum);
+    
+    return 0;
+}
+
+
+
+// Program to print a number with 3 numbers (4 digits each) as input
+  
+  
+  
+  #include <stdio.h>
+#include <math.h>
+int main()
+{
+    int sum=0, a,b,c,r1,r2,r3,r4,count=0,s;
+    scanf("%d%d%d",&a,&b,&c);
+    while(a!=0&&b!=0&&c!=0)
+    {
+        count++;
+        r1= a%10;
+        r2= b%10;
+        r3= c%10;
+        if(count%2==1)
+        {
+            s=r1<r2?(r1<r3?r1:r3):(r2<r3)?r2:r3;
+        }
+        else
+        {
+            s=r1>r2?(r1>r3?r1:r3):(r2>r3)?r2:r3;
+        }
+        sum+= s * pow(10, count-1);
+        
+        a/=10;
+        b/=10;
+        c/=10;
+    }
+    printf("\n%d", sum);
+    
+    return 0;
+}
